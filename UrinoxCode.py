@@ -1,6 +1,5 @@
 import cv2 as cv
 import numpy as np
-import matplotlib.pyplot as plt
     
 #  True Reference Colors
 TrueRGB = np.array([[243, 243, 242], [254, 248, 188],                   [230, 218, 175],    [222, 184, 135],    [207, 159, 150], [165, 120, 153], [110, 83, 125],   [52, 52, 52], 
@@ -248,8 +247,7 @@ def urinalysis(CaptImg):
         Box_Y = Box_Y + Interspace
     ################################################## STEP 5: COLOR MATCHING ##################################################
     Report = np.zeros((StripColorCount))
-    
-    print('---------- Medical Report ----------')
+
     def rmse(predictions, targets):
         return np.sqrt(((predictions - targets) ** 2).mean())
     
